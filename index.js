@@ -45,7 +45,9 @@ app.get("/canciones", async (req, res) =>
 
 app.put("/cancion/:id", async (req, res) =>
 {
+    const id = req.params.id;
     const payload = req.body;
+    payload.id = id;
 
     try 
     {

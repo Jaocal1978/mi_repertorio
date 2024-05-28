@@ -39,8 +39,8 @@ const consultar = async () => {
 
 const editar = async (payload) =>
 {
-    const text = "UPDATE canciones SET titulo = $1, artista = $2, tono = $3 WHERE artista = $2";
-    const values = [payload.titulo, payload.artista, payload.tono];
+    const text = "UPDATE canciones SET titulo = $1, artista = $2, tono = $3 WHERE id = $4";
+    const values = [payload.titulo, payload.artista, payload.tono, payload.id];
 
     const queryObject = {
         text : text,
